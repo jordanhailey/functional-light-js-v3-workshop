@@ -35,7 +35,13 @@ function sortStudentsByID() {
 // *************************************
 
 // modify/move this function
-function getStudentsByID() { return students; }
+function getStudentsByID(s) { 
+	let ogStudents = students.slice();
+	students = s.slice();
+	let sortedS = sortStudentsByID()
+	students = ogStudents
+	return sortedS; 
+}
 
 // *************************************
 
